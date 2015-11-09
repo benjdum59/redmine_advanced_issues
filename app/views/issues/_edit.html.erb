@@ -17,7 +17,7 @@
 		<p>
 		  <label for="time_entry_hours"><%= l(:field_time_entry_hours) %></label>
 		  <%= text_field_tag 'time_entry[hours]', @time_entry.time, :size => 6 %> 
-		  <%= l(:field_estimated_default, :unit => @time_entry.default_unit_time) %>
+		  <%= l(:field_estimated_time, :unit => @time_entry.default_unit_time) %>
 		</p>
 
         </div>

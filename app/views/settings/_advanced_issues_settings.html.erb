@@ -35,10 +35,7 @@
   <%= select_tag('settings[default_unit]',
                  options_for_select({
                                       l(:hour) => 'hours',
-                                      l(:day) => 'days',
-                                      l(:week) => 'weeks',
-                                      l(:month) => 'months',
-                                      l(:year) => 'years' }, @settings['default_unit'])) %>
+                                      }, @settings['default_unit'])) %>
                                      
 
 </p>

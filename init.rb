@@ -51,12 +51,12 @@ end #Rails::VERSION
 
 Redmine::Plugin.register :redmine_advanced_issues do
   name 'Redmine Advanced Issues plugin'
-  author 'Tieu-Philippe KHIM'
+  author 'Tieu-Philippe KHIM, Benjamin DUMONT'
   description '
 This is a plugin for Redmine, that add some advanced stuffs.
 Spent time columns, unit time customize
 '
-  version '0.0.5'
+  version '0.0.6'
   url 'http://blog.spikie.info/'
   author_url 'http://blog.spikie.info'
 

@@ -27,7 +27,7 @@ module Hooks
         value = context[:params][:issue][:estimated_hours]
         time_unit = ""
 
-        if value.to_s =~ /^([0-9]+)\s*[a-z]{1}$/
+        if value.to_s =~ /^([0-9]+)(\.[0-9]+)?\s*[a-z]{1}$/ 
           time_unit = RedmineAdvancedIssues::TimeManagement.getUnitTimeFromChar value.to_s[-1, 1]
         else
           time_unit = Setting.plugin_redmine_advanced_issues['default_unit']
@@ -39,11 +39,11 @@ module Hooks
 
       end #if
 
-      if context[:time_entry] && context[:time_entry][:hours].present?
-        value = context[:time_entry][:hours]
+      if context[:params] && context[:params][:time_entry] && context[:params][:time_entry][:hours].present?
+        value = context[:params][:time_entry][:hours]
         time_unit = ""
 
-        if value.to_s =~ /^([0-9]+)\s*[a-z]{1}$/
+        if value.to_s =~ /^([0-9]+)(\.[0-9]+)?\s*[a-z]{1}$/
           time_unit = RedmineAdvancedIssues::TimeManagement.getUnitTimeFromChar value.to_s[-1, 1]
         else
           time_unit = Setting.plugin_redmine_advanced_issues['default_unit']
